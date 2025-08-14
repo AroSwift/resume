@@ -1,85 +1,249 @@
-\documentclass[11pt,a4paper,sans]{moderncv}
+% =============================================================================
+% Aaron Barlow - Professional Resume
+% LaTeX Document Configuration and Custom Commands
+% =============================================================================
 
-% moderncv themes
-\moderncvstyle{classic}
-\moderncvcolor{blue}
+% Document class and basic settings
+% Using article class with 11pt font and A4 paper size for professional appearance
+\documentclass[11pt,a4paper]{article}
 
-% character encoding
-\usepackage[utf8]{inputenc}
+% =============================================================================
+% PACKAGE IMPORTS AND CONFIGURATION
+% =============================================================================
 
-% adjust the page margins
-\usepackage[scale=0.85]{geometry}
+% Font configuration - Using Georgia for a professional, readable appearance (similar to Cambria)
+\usepackage{fontspec}
+\setmainfont{Georgia}
 
-% personal data
-\name{Aaron}{Barlow}
-\phone{865.804.6746}
-\email{abarlow505@gmail.com}
-\social[linkedin]{allaaronbarlow}
-\social[github]{aroswift}
+% Page layout and spacing packages
+\usepackage[margin=0.6in]{geometry}  % Set page margins to 0.6 inches for compact layout
+\usepackage{enumitem}                % Enhanced list formatting
+\usepackage{setspace}                % Line spacing control
+\usepackage{xcolor}                  % Color support for custom styling
+
+% =============================================================================
+% DOCUMENT STYLING AND FORMATTING
+% =============================================================================
+
+% Remove paragraph indentation and set paragraph spacing for clean layout
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+% =============================================================================
+% CUSTOM COMMAND DEFINITIONS
+% =============================================================================
+
+% Custom section command that creates a thick gray underline
+% Usage: \resumesection{Section Name}
+% Creates a bold section title with a 2pt gray rule underneath
+\newcommand{\resumesection}[1]{
+    \vspace{3pt}                                    % Add space before section
+    \noindent{\fontsize{13}{15}\selectfont\textbf{#1}}\\[-8pt]                    % Bold section title with 2pt+ increase
+    \noindent\textcolor{gray}{\rule{\textwidth}{2pt}}\\[-10pt]  % Gray underline
+}
+
+% Custom experience entry command for consistent formatting
+% Parameters: #1 = Company/Institution, #2 = Date Range, #3 = Job Title, #4 = Location
+% Usage: \experienceentry{Company}{Date Range}{Job Title}{Location}
+\newcommand{\experienceentry}[4]{
+    \vspace{2pt}                                    % Add space before entry
+    \noindent\textbf{#1} \hfill #2\\               % Company name (left) and dates (right)
+    \noindent{\fontsize{10}{12}\selectfont\textit{#3}} \hfill {\fontsize{10}{12}\selectfont\textit{#4}}\\               % Job title (italic, left) and location (right) with -1pt
+    \vspace{1pt}                                    % Add space after entry
+}
+
+% Custom command for smaller font bullet points to save space
+% Usage: \smallbullet{Bullet point text}
+% Reduces font size to 9pt for more compact bullet points (additional -1pt)
+\newcommand{\smallbullet}[1]{
+    \item {\fontsize{9}{11}\selectfont #1}
+}
+
+% Custom command for regular bullet points with -1pt font size
+% Usage: \regbullet{Bullet point text}
+% Reduces font size to 10pt for regular bullet points
+\newcommand{\regbullet}[1]{
+    \item {\fontsize{10}{12}\selectfont #1}
+}
+
+% =============================================================================
+% DOCUMENT CONTENT BEGINS
+% =============================================================================
 
 \begin{document}
 
-\makecvtitle
+% =============================================================================
+% HEADER SECTION - Personal Information
+% =============================================================================
 
-\section{Experience}
+% Centered header with name and contact information
+\begin{center}
+    {\fontsize{19}{23}\selectfont\textbf{AARON BARLOW}}\\[4pt]           % Large, bold name with 1pt increase
+    865.804.6746  |  abarlow505@gmail.com  |  github.com/aroswift  |  aaronbarlow.dev\\[4pt]
+\end{center}
 
-\cventry{Jun 2020--Present}{HPC Software Engineer}{Oak Ridge National Laboratory}{National Center for Computational Sciences (NCCS)}{}{
-\begin{itemize}
-\item \textbf{Federated Learning on AMD GPUs:} Enabled NVFLARE on ROCm/MI250X with PyTorch (ROCm); replaced CUDA-bound dependencies with ROCm/HIP-compatible builds, packaged deterministic ROCm containers, and integrated with Slurm using mTLS in secure enclaves; validated multi-node rounds across multiple nodes/GPUs, unblocking research teams and reducing vendor lock-in
-\item \textbf{myOLCF Portal Ownership:} Self-service \& monitoring portal serving researchers across multiple projects with 99.9\%+ availability; 12 production deployments in FY2025
-\item \textbf{Platform Performance:} Migrated to Vite + CI tuning → builds reduced from ~2 min to 9s (-92\%), server startup from 30s to <200ms (-99\%), unit tests from 90s to 6s (-93\%); significantly reduced development wait time
-\item \textbf{Runtime Performance:} Improved portal responsiveness 71.8\% (2021) and 155\% (2023) via query batching, read-through caching, and front-end optimizations
-\item \textbf{Smart Facility Metrics Backend:} Designed \& implemented ingestion of compute/data/I/O/benchmark-efficiency metrics and exposed via APIs + myOLCF; adopted by multiple teams for capacity tuning and anomaly detection
-\item \textbf{Reliability \& Features:} Delivered filesystem-usage reporting (including AFW-specific reports), V5 access endpoints, and RATS via proxy across enclaves; resolved service-proxy enclave routing defects
-\item \textbf{Security \& Compliance:} Contributed to Scalable Protected Infrastructure (SPI); built middleware routing demographics to PII-compliant ITSD database; shipped obfuscated production bundles
-\item \textbf{Data Correctness \& Operations:} Added ability to change project app's reserved project ID and recurring mapping job; reduced manual corrections/tickets significantly
-\item \textbf{Quality Assurance:} Cut post-deploy incidents to 0 over recent releases by expanding Cypress/feature coverage and tightening parameter validation
-\item \textbf{Leadership:} Mentored interns/junior engineers and authored runbooks/SLOs + incident playbooks; reduced MTTR significantly
-\end{itemize}}
+% =============================================================================
+% EXPERIENCE SECTION - Professional Work History
+% =============================================================================
 
-\cventry{Jun--Aug 2019}{ML Engineer Intern}{Bank of America}{Consumer, Small Business \& Wealth Tech}{}{
-\begin{itemize}
-\item Built NLP entity extraction service (names/phones/addresses/accounts/amounts) achieving 96\% F1 score, supporting \$20M+/yr in savings through automation
-\end{itemize}}
+\resumesection{EXPERIENCE}
 
-\cventry{May 2015--May 2019}{Software Developer Intern}{Oak Ridge National Laboratory}{National Center for Computational Sciences (NCCS)}{}{
-\begin{itemize}
-\item Year-round development of HPC-centric services, applications, and BI tools; shipped production features across internal portals
-\item Automated supercomputer access communications via policy-aware email system; standardized messaging and reduced manual steps
-\item Built WordPress/REST plugin to sync \& display HPC metrics on olcf.ornl.gov; improved data freshness and reduced update toil
-\end{itemize}}
+% Current position at Oak Ridge National Laboratory
+\noindent\textbf{Oak Ridge National Laboratory — National Center for Computational Sciences (NCCS)}\\
+\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}\\
+\noindent{\fontsize{9}{11}\selectfont\textit{Scope:} Build researcher self-service and fleet operations software across \textbf{27 HPC clusters} (incl. Frontier), enforcing \textbf{policy-as-code} and secure access for a \textbf{\$700M+} compute footprint.}
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% Federated Learning project - Key technical achievement
+\regbullet{Enabled \textbf{privacy-preserving federated learning at exascale} on \textbf{Frontier (first U.S. exascale system; TOP500 \#2)}, unlocking cross-institution healthcare data training on AMD GPUs. Brought NVFLARE to ROCm/MI250X with PyTorch (ROCm), produced HIP-compatible builds, packaged deterministic ROCm containers, and integrated with Slurm with mTLS inside secure enclaves. Validated multi-node training rounds previously not possible on Frontier. Now used to build \textbf{privacy-preserving medical foundation models} on Frontier.}
 
-\section{Skills}
+% Portal ownership and reliability achievements
+\regbullet{Owned and scaled \textbf{myOLCF} (researcher self-service \& monitoring) used by \textbf{thousands (\~4k)} across \textbf{1,000+ projects} with \textbf{99.9\%+} availability. Shipped \textbf{12} FY2025 releases. Governs access, allocation, and policy across open, moderate, and secure enclaves.}
 
-\cvitem{Languages}{Ruby, Python, Go, TypeScript (Node), SQL, Bash}
-\cvitem{Back-end}{Rails, FastAPI/Flask, gRPC, REST, Redis, PostgreSQL}
-\cvitem{Infrastructure/Observability}{Docker, Kubernetes, Kustomize, Slurm, CI/CD, Prometheus/Grafana, OpenTelemetry, ROCm}
-\cvitem{ML/FL Infrastructure}{NVFLARE, PyTorch (ROCm), HIP}
-\cvitem{Cloud/Data}{AWS, Kafka (concepts)}
-\cvitem{Domains}{HPC platforms, secure enclaves (ITAR/PHI/PII/HIPAA), BI dashboards, agentic automation}
+% Performance improvements with specific metrics
+\regbullet{Replaced Jbuilder with a JSON\:API serializer and explicit Redis caching for hot read paths, taking the 100k-row directories endpoint from \~272s to \textbf{178--206 ms} on cached hits (0.206s avg) (≈\textbf{1320×}; −\textbf{99.92\%}) and improving first-hit from \textbf{298.5s} to \textbf{246.8s} (−\textbf{17\%}). Eliminated view-rendering cost (\~252s $\rightarrow$ \~0ms) and cut ActiveRecord time (\~19.2s $\rightarrow$ \textbf{8.8ms}). Stabilized fleet-wide polling and removed timeouts during cluster syncs.}
 
-\section{Education}
+% Backend system development
+\regbullet{Extended the Netflix-originated \textbf{fast\_jsonapi} fork (\textbf{jsonapi-serializer}) via `lib/library\_extensions/jsonapi\_serializer.rb` to support legacy root envelopes for V3/V4, runtime cache flags/TTLs, and per-record invalidation; enabling progressive rollout across endpoints.}
 
-\cventry{May 2020}{B.S. Computer Science}{East Tennessee State University}{}{}{GPA: 3.94/4.00, Dean's List}
+% Build and CI improvements
+\regbullet{Accelerated build, startup, and test cycles by migrating to Vite and optimizing CI. Builds \textbf{2 min $\rightarrow$ 9 s (-92\%)}, startup \textbf{30 s $\rightarrow$ <200 ms (-99\%)}, tests \textbf{90 s $\rightarrow$ 6 s (-93\%)}. Cut developer idle time and sped up review cycles.}
 
-\section{Selected Projects}
+% Smart Facility metrics platform
+\regbullet{Built the \textbf{Smart Facility metrics platform} (backend in Crystal/Amber) ingesting compute/data/I/O/efficiency metrics; pre-aggregated dashboards deliver \textbf{100k-record} views with low latency and serve \textbf{\~50k time-series points in \~87 ms}. Benchmarked \~\textbf{10.4k req/sec per CPU core (\~96 µs/req)} for simple JSON. Shifted heavy computation to background jobs and index tables. Used by lab leadership to guide next-gen procurements (RAM/IO/GPU/storage priorities) and to benchmark domains, flagging inefficient Slurm jobs.}
 
-\cvitem{Automatic Movie Creation}{Multi-agent workflow generates script → storyboard images → 10-sec clips (Runway/Cling) → stitches, QC, and auto-publishes; prototype short films with rapid iteration cycles and optimized GPU cost}
-\cvitem{Agentic Content Automation (Project Cadenza)}{End-to-end pipeline generates music → videos → metadata → thumbnails and auto-uploads to YouTube; high throughput with minimal manual time and excellent success rate}
-\cvitem{Policy-Driven Data Synthesizer}{Training automation that takes policy/goal and auto-creates synthetic training data → trains/refits model with quality guardrails and metric improvements}
-\cvitem{Automatic Product Creation}{E-commerce pipeline: prompts → listings (title, bullets, SEO tags, imagery) → auto-publish to Etsy/WooCommerce/Redbubble; generates multiple SKUs with optimized listing time and CTR}
-\cvitem{Automatic Music Creation \& Distribution}{Prompt-to-track with mixing/mastering, ISRC/metadata, art generation, and multi-platform upload; tracks shipped with strong retention rates}
-\cvitem{Automatic Music Video Creation}{Audio beat-map → storyboard → video assembly → captioning → render; videos with high CTR and render success rates}
-\cvitem{Automatic Podcast Creation}{Topic → script → TTS voices → mastering → RSS feed and auto-publish; consistent cadence with strong engagement}
-\cvitem{Automatic Book Creation}{Outline → drafts → edits → cover art → layout (PDF/EPUB) → KDP-ready; titles generated with optimized time per book}
-\cvitem{HOA Management Platform}{Lightweight tool to manage dues, violations, and communications; reduced manual back-office time significantly with multiple homes onboarded}
+% GitOps and Kubernetes
+\regbullet{Standardized \textbf{GitOps delivery} with Kustomize + Argo CD on Kubernetes (GitLab runners), enabling declarative configs, drift correction, and one-click rollbacks across environments.}
 
-\section{Leadership \& Service}
+% Policy-as-code service
+\regbullet{Unified day-to-day operations across \textbf{27 HPC clusters} (incl. \textbf{Frontier}) via a central \textbf{policy-as-code} service. Automated project provisioning, access control, and scheduler policy across SLURM/LSF enclaves. Backbone software for a \textbf{\$700M+} compute fleet and mixed open $\rightarrow$ secure environments.}
 
-\cvitem{Selected Talks}{CUG 2025 — "Employing a Software-Driven Approach to Scalable HPC System Management"; NLIT 2024 — "Employing DevOps in HPC Operational Management"}
-\cvitem{Workshop Chair}{ORNL Pathways to Computing Internship Program (PCIP) • 2022--Present}
-\cvitem{Student Program Committee Chair}{PEARC (Advanced Research Computing Conf.) • 2021--Present}
-\cvitem{President}{ACM (ETSU) • 2019--2020}
-\cvitem{Vice President}{Ethical Hacking (ETSU) • 2018--2019}
+% Automation and data integrity
+\regbullet{Automated project lifecycle and data-integrity workflows, eliminating manual back-office corrections for project/application records.}
+
+% Quality assurance and testing
+\regbullet{Zero post-deploy incidents over the past 3 years by expanding Cypress/feature coverage and tightening parameter validation.}
+
+% Leadership and mentoring
+\regbullet{Mentored \textbf{3} interns/junior engineers; coached \textbf{100+} students through PEARC/SC workshops. Authored runbooks, SLOs, and incident playbooks.}
+\end{itemize}
+
+% Internship at Bank of America
+\vspace{8pt}
+\noindent\textbf{Bank of America — Consumer, Small Business \& Wealth Tech}\\
+\noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% NLP project with quantifiable results
+\regbullet{Built an \textbf{NLP entity extraction service} (names/phones/addresses/accounts/amounts) at \textbf{96\% F1}, supporting \textbf{\$20M+/yr} in savings through automation}
+\end{itemize}
+
+% Previous internship at ORNL
+\vspace{8pt}
+\noindent\textbf{Oak Ridge National Laboratory — National Center for Computational Sciences (NCCS)}\\
+\noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% General development work
+\regbullet{Year-round development of HPC-centric services, applications, and BI tools. Shipped production features across internal portals.}
+
+% Automation project
+\regbullet{Automated supercomputer access communications via a policy-aware email system. Standardized messaging and reduced manual steps.}
+
+% WordPress plugin development
+\regbullet{Built a WordPress/REST plugin to sync \& display HPC metrics on olcf.ornl.gov. Improved data freshness and reduced update toil.}
+\end{itemize}
+
+% =============================================================================
+% SKILLS SECTION - Technical Competencies
+% =============================================================================
+
+\resumesection{SKILLS}
+
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% Programming languages
+\regbullet{\textbf{Languages:} Ruby, Python, Go, TypeScript (Node), SQL, Bash}
+
+% Backend technologies
+\regbullet{\textbf{Back-end:} Rails, FastAPI/Flask, gRPC, REST, Redis, Postgres}
+
+% Infrastructure and observability tools
+\regbullet{\textbf{Infra/Obs:} Docker, Kubernetes, Kustomize, \textbf{Argo CD}, \textbf{Slurm}, CI/CD, Prometheus/Grafana, OpenTelemetry, \textbf{ROCm}, HashiCorp Vault, MinIO, KubeDB, Stash, SonarQube}
+
+% Machine learning and federated learning infrastructure
+\regbullet{\textbf{ML/FL Infra:} NVFLARE, PyTorch (ROCm), HIP}
+
+% Agentic systems
+\regbullet{\textbf{Agentic Systems:} multi-agent orchestration (\textbf{CrewAI} for Anthologia \& prediction-market system), autonomous pipelines, headless uploaders, queueing/retries}
+\end{itemize}
+
+% =============================================================================
+% EDUCATION SECTION - Academic Background
+% =============================================================================
+
+\resumesection{EDUCATION}
+
+% Educational background with GPA and honors
+\noindent\textbf{East Tennessee State University} — Bachelor of Science, Computer Science | Dean's List | GPA \textbf{3.94/4.00} • May 2020\\
+\noindent{\fontsize{9}{11}\selectfont Activities: \textbf{ACM (President, 2019--2020)}; \textbf{Ethical Hacking (Vice President, 2018--2019)}}
+
+% =============================================================================
+% SELECTED PROJECTS SECTION - Personal and Professional Projects
+% =============================================================================
+
+\resumesection{SELECTED PROJECTS}
+
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% AI-powered content creation projects
+\regbullet{\textbf{Automatic movie creation (agentic pipeline)} — multi-agent workflow generates script $\rightarrow$ storyboard images $\rightarrow$ 10-sec clips (Runway/Cling) $\rightarrow$ stitches, QC, and \textbf{auto-publishes}.}
+
+% Music and video automation
+\regbullet{\textbf{Anthologia (AI video storytelling)} — multi-agent pipeline (\textbf{CrewAI}) turns concepts into \textbf{20-second} videos with \textbf{4 scenes}, using DALL·E 3 + Veo 3.0 (fallback Kling), ElevenLabs narration/SFX, and LatentSync lip sync; typical \textbf{4--12 min} per production with automated QC/fallbacks.}
+
+% Music and video automation
+\regbullet{\textbf{Project Cadenza (agentic music + video)} — agentic pipeline creates artists/albums, writes lyrics (GPT), generates songs (Suno/Udio), masters audio, produces thumbnails/art, and \textbf{auto-uploads to YouTube} with metadata/scheduling; \textbf{published 150 videos}; prepares ISRC/metadata for distributor workflows.}
+
+% AI training automation
+\regbullet{\textbf{Policy-driven data synthesizer (training automation)} — takes a policy/goal and \textbf{auto-creates synthetic training data} $\rightarrow$ trains/refits a model with quality guardrails.}
+
+% E-commerce automation
+\regbullet{\textbf{Automatic product creation (e-commerce)} — AI agents (GPT) and custom orchestration + Flux Pro image gen $\rightarrow$ vectorize/upscale $\rightarrow$ SEO titles/tags $\rightarrow$ \textbf{auto-publish} via Printful/Etsy and Redbubble; \textbf{152 products created} with \textbf{57k+ product views} to date; \textbf{cost ≈ \$0.31 per product}; database-driven workflow with retries and headless uploaders.}
+
+% Music creation and distribution
+\regbullet{\textbf{Automatic music video creation} — audio beat-map $\rightarrow$ storyboard $\rightarrow$ video assembly $\rightarrow$ captioning $\rightarrow$ render; \textbf{478 views} with \textbf{10.8 hours watched} on recent releases.}
+
+% Podcast automation
+\regbullet{\textbf{Automatic podcast creation} — multi-channel system (12+) with \textbf{Claude 3.5 Sonnet} scripts (7k+ words) $\rightarrow$ ElevenLabs TTS $\rightarrow$ audio assembly $\rightarrow$ \textbf{auto-publish} to Spreaker with metadata/scheduling; produces \textbf{6+ episodes per run} and has shipped \textbf{192 episodes}, totaling \textbf{\~1.8k downloads} and \textbf{50+ hours listened}.}
+
+% Book creation automation
+\regbullet{\textbf{Automatic book creation} — multi-agent pipeline (CrewAI) orchestrates GPT-4o-mini writing, Flux Pro/Replicate illustrations with vision-based QC, then compiles \textbf{print-ready PDF/EPUB} via ReportLab/LaTeX; metadata persisted in Firebase; typical cost \textbf{<\$5--10/book}.}
+
+% AI prediction market trading system
+\regbullet{\textbf{AI prediction-market trading system (Kalshi)} — multi-agent analysis (\textbf{CrewAI}) + real-time WebSocket feeds, vector DB, and Kelly sizing; selects market and executes end-to-end in \textbf{<6 minutes} (dev stage), with Dockerized services and a live dashboard.}
+
+% Business application
+\regbullet{\textbf{HOA management platform} — multi-tenant Rails+React application with modules for dues, violations, residents, and public sites; role-based access, reporting, and React/Vite front-end with Inertia; built for production but not yet deployed to live HOAs.}
+\end{itemize}
+
+% =============================================================================
+% TALKS & COMMUNITY SECTION - Professional Involvement
+% =============================================================================
+
+\resumesection{TALKS \& COMMUNITY}
+
+\begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
+% Conference presentations and speaking engagements
+\regbullet{\textbf{CUG 2025} — "Employing a Software-Driven Approach to Scalable HPC System Management."}
+
+% Conference presentations and speaking engagements
+\regbullet{\textbf{NLIT 2024} — "Employing DevOps in HPC Operational Management."}
+
+% Workshop and program leadership
+\regbullet{\textbf{ORNL Pathways to Computing Internship Program} — Workshop Chair, 2022--present.}
+
+% Conference committee involvement
+\regbullet{\textbf{PEARC Conference} — Student Program Committee Chair, 2021--present.}
+\end{itemize}
+
+% =============================================================================
+% DOCUMENT END
+% =============================================================================
 
 \end{document}

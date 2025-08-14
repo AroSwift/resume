@@ -1,98 +1,190 @@
 # Aaron Barlow - Professional Resume
 
-This repository contains a professional LaTeX resume for Aaron Barlow, formatted using the `moderncv` class for a clean, modern appearance.
+<div align="center">
+
+![LaTeX](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=latex&logoColor=white)
+![PDF](https://img.shields.io/badge/PDF-FF0000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)
+![Make](https://img.shields.io/badge/Make-FF6B35?style=for-the-badge&logo=gnu&logoColor=white)
+
+*A clean, modern LaTeX resume template with professional formatting and easy customization*
+
+[![Compile Status](https://img.shields.io/badge/Compile-Status-success?style=flat-square)](https://github.com/aroswift/resume)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
+
+</div>
+
+---
+
+## Features
+
+- **Modern Design**: Clean, professional layout with Georgia font
+- **Easy Customization**: Simple LaTeX commands for consistent formatting
+- **Cross-Platform**: Works on macOS, Linux, and Windows
+- **Automated Build**: Makefile for seamless compilation
+- **Font Support**: Uses XeLaTeX for advanced typography
+- **Responsive Layout**: Optimized for A4 paper with compact margins
 
 ## Quick Start
 
 ### Prerequisites
 
-You need a LaTeX distribution installed on your system:
+You'll need a modern LaTeX distribution with XeLaTeX support:
 
-- **macOS**: Install MacTeX using `brew install --cask mactex`
-- **Ubuntu/Debian**: `sudo apt-get install texlive-full latexmk`
-- **Fedora/CentOS**: `sudo dnf install texlive-scheme-full latexmk`
+**macOS** (using Homebrew):
+```bash
+brew install --cask mactex
+# Or: make install-macos
+```
+
+**Ubuntu/Debian**:
+```bash
+sudo apt-get update && sudo apt-get install -y texlive-full latexmk
+# Or: make install-ubuntu
+```
+
+**Fedora/CentOS/RHEL**:
+```bash
+sudo dnf install -y texlive-scheme-full latexmk
+# Or: make install-fedora
+```
+
+**Windows**: Download and install [MiKTeX](https://miktex.org/download) or [TeX Live](https://www.tug.org/texlive/)
 
 ### Compile the Resume
 
-1. **Using Makefile (Recommended)**:
-   ```bash
-   make resume
-   ```
+**Using Makefile (Recommended)**:
+```bash
+git clone https://github.com/aroswift/resume.git
+cd resume
+make resume
+```
 
-2. **Manual compilation**:
-   ```bash
-   pdflatex resume.tex
-   pdflatex resume.tex  # Run twice for proper formatting
-   ```
+**Manual Compilation**:
+```bash
+make clean
+xelatex -interaction=nonstopmode resume.tex
+xelatex -interaction=nonstopmode resume.tex  # Run twice for proper formatting
+```
 
-### View the Resume
+**View the Resume**:
+- macOS: `make open-macos`
+- Linux: `make open-linux`
+- Windows: Open `resume.pdf` in your preferred PDF viewer
 
-- **macOS**: `make open-macos`
-- **Linux**: `make open-linux`
-- **Manual**: Open `resume.pdf` in your preferred PDF viewer
+## Project Structure
 
-## File Structure
-
-- `resume.tex` - Main LaTeX source file
-- `resume.pdf` - Compiled PDF output (generated after compilation)
-- `Makefile` - Build automation and utility commands
-- `README.md` - This file
+```
+resume/
+├── resume.tex          # Main LaTeX source file
+├── resume.pdf          # Compiled PDF output (generated)
+├── Makefile            # Build automation and utilities
+├── README.md           # This documentation
+└── .gitignore          # Git ignore patterns
+```
 
 ## Customization
 
-### Adding/Modifying Content
+### Content Updates
 
-Edit `resume.tex` to update your information:
+Edit `resume.tex` to personalize your information:
 
-1. **Personal Information**: Update the `\name`, `\phone`, `\email`, and social media links
-2. **Experience**: Modify the `\cventry` commands in the Experience section
-3. **Skills**: Update the `\cvitem` commands in the Skills section
+1. **Personal Information**: Update contact details in the header section
+2. **Experience**: Modify `\experienceentry` commands in the Experience section
+3. **Skills**: Update the skills list in the Skills section
 4. **Projects**: Add or modify projects in the Selected Projects section
+5. **Education**: Update academic background and achievements
 
 ### Styling Options
 
-The resume uses the `moderncv` class with the following settings:
+The resume features a professional design with:
+- **Font**: Georgia (professional, readable)
+- **Font Size**: 11pt (optimal readability)
+- **Paper**: A4 (international standard)
+- **Margins**: 0.6 inches (compact layout)
+- **Colors**: Gray accents for visual hierarchy
 
-- **Style**: `classic` - Clean, professional appearance
-- **Color**: `blue` - Professional blue color scheme
-- **Font Size**: 11pt
-- **Paper**: A4
+### Custom Commands
 
-You can change these by modifying the document class options and theme settings at the top of `resume.tex`.
+- `\resumesection{Title}` - Creates section headers with gray underlines
+- `\experienceentry{Company}{Dates}{Title}{Location}` - Formats experience entries
+- `\smallbullet{Text}` - Creates compact bullet points
 
-## Available Make Commands
+## Available Commands
 
-- `make resume` - Compile the resume to PDF
-- `make clean` - Remove auxiliary LaTeX files
-- `make clean-all` - Remove all generated files including PDF
-- `make install-macos` - Install LaTeX on macOS
-- `make install-ubuntu` - Install LaTeX on Ubuntu/Debian
-- `make install-fedora` - Install LaTeX on Fedora/CentOS
-- `make open-macos` - Open PDF on macOS
-- `make open-linux` - Open PDF on Linux
+| Command | Description |
+|---------|-------------|
+| `make resume` | Compile the resume to PDF |
+| `make clean` | Remove auxiliary LaTeX files |
+| `make clean-all` | Remove all generated files including PDF |
+| `make install-macos` | Install LaTeX on macOS |
+| `make install-ubuntu` | Install LaTeX on Ubuntu/Debian |
+| `make install-fedora` | Install LaTeX on Fedora/CentOS |
+| `make open-macos` | Open PDF on macOS |
+| `make open-linux` | Open PDF on Linux |
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Missing LaTeX packages**: If you get errors about missing packages, install a full LaTeX distribution
-2. **Font issues**: The resume uses standard fonts, but if you have issues, ensure your LaTeX installation includes basic fonts
-3. **Compilation errors**: Run `make clean` and try compiling again
+**Fontspec Package Error**:
+```
+Fatal Package fontspec Error: The fontspec package requires either XeTeX or LuaTeX
+```
+*Solution*: Use XeLaTeX instead of pdflatex. The Makefile is already configured correctly.
+
+**Missing LaTeX Packages**:
+```
+! LaTeX Error: File `fontspec.sty' not found
+```
+*Solution*: Install a complete TeX Live distribution that includes all packages.
+
+**Font Not Found**:
+```
+! Font \TU/Georgia(0)/m/n/11=Georgia at 11pt not loadable
+```
+*Solution*: Georgia font should be available on most systems. If issues persist, the template will fall back to system fonts.
+
+**Compilation Errors**:
+```
+! LaTeX Error: Something's wrong--perhaps a missing \item
+```
+*Solution*: Run `make clean` and recompile to clear any cached files.
 
 ### Getting Help
 
-- Check that you have a complete LaTeX distribution installed
-- Ensure all files are in the same directory
-- Try running `make clean` before recompiling
+1. Check Installation: Ensure you have a complete LaTeX distribution installed
+2. Verify Files: Make sure all files are in the same directory
+3. Clean Build: Run `make clean` before recompiling
+4. Check Logs: Review `resume.log` for detailed error information
 
-## Professional Tips
+## Contributing
 
-1. **Keep it to one page**: The current format is designed to fit on a single page
-2. **Update metrics**: Replace placeholder metrics with actual numbers where possible
-3. **Tailor for jobs**: Modify keywords and focus areas based on specific job requirements
-4. **Regular updates**: Keep your resume current with new projects and achievements
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### Development Guidelines
+
+- Test compilation on multiple platforms
+- Update documentation for any new features
+- Follow existing code style and formatting
+- Add appropriate error handling
 
 ## License
 
-This resume template is based on the `moderncv` LaTeX class, which is freely available and modifiable.
-# resume
+This resume template is freely available and modifiable for personal and professional use. Feel free to adapt it for your own needs!
+
+---
+
+<div align="center">
+
+**Built with LaTeX and Make**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aroswift)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/allaaronbarlow)
+
+</div>

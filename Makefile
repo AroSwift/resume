@@ -7,8 +7,8 @@ resume: resume.pdf
 # Compile LaTeX to PDF
 resume.pdf: resume.tex
 	@echo "Compiling LaTeX document..."
-	pdflatex -interaction=nonstopmode resume.tex
-	pdflatex -interaction=nonstopmode resume.tex  # Run twice for proper formatting
+	xelatex -interaction=nonstopmode resume.tex
+	xelatex -interaction=nonstopmode resume.tex  # Run twice for proper formatting
 	@echo "Resume compiled successfully!"
 
 # Clean up auxiliary files
