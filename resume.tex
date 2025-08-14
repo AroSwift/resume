@@ -107,23 +107,23 @@
 \noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Exascale federated learning
-\regbullet{Exascale federated learning on Frontier. Ported NVFLARE to ROCm/MI250X (PyTorch with HIP-compatible builds), packaged deterministic ROCm containers, and integrated with Slurm + mTLS in secure enclaves; validated multi-node rounds and enabled current medical foundation-model training on Frontier.}
+\regbullet{Developed privacy-preserving federated learning at exascale on Frontier (TOP500 \#2), enabling cross-institution healthcare data training on AMD GPUs. Integrated NVFLARE with ROCm/MI250X and PyTorch, produced HIP-compatible builds, and implemented Slurm integration with mTLS inside secure enclaves. Validated multi-node training rounds previously unachievable on Frontier, now utilized for building privacy-preserving medical foundation models.}
 
 % 1320x faster directories API
-\regbullet{1320x faster directories API. Jbuilder $\rightarrow$ JSON:API serializer + explicit Redis caching for hot reads: cached hits ~0.206 s (from ~272 s, −99.92\%); first-hit 298.5 s $\rightarrow$ 246.8 s (−17\%). Eliminated view render and cut ActiveRecord ~19.2 s $\rightarrow$ 8.8 ms; stabilized polling and removed cluster-sync timeouts.}
+\regbullet{Optimized the directories endpoint by replacing Jbuilder with a JSON:API serializer and explicit Redis caching for hot read paths, reducing response time from ~272s to 178--206 ms on cached hits (≈1320× improvement) and improving first-hit performance from 298.5s to 246.8s (−17\%). Eliminated view-rendering costs (~252s to ~0ms) and reduced ActiveRecord time (~19.2s to 8.8ms). Stabilized fleet-wide polling and removed timeouts during cluster syncs.}
 
 % myOLCF scale & reliability
-\regbullet{myOLCF scale \& reliability. Owned researcher self-service used by ~4k users across 1k+ projects with 99.9\%+ availability; 12 FY2025 releases governing access, allocations, and policy across open $\rightarrow$ secure enclaves.}
+\regbullet{Managed and scaled myOLCF, a researcher self-service and monitoring platform used by approximately 4,000 users across 1,000+ projects, achieving 99.9\%+ availability. Delivered 12 FY2025 releases governing access, allocation, and policy across open, moderate, and secure enclaves.}
 
 % Smart Facility metrics
-\regbullet{Smart Facility metrics (Crystal/Amber). Pre-aggregated dashboards deliver 100k-row views with ~87 ms latency; simple JSON at ~10.4k req/s per CPU core (~96 us/req). Informs next-gen procurements (RAM/IO/GPU/storage) and flags inefficient Slurm jobs.}
+\regbullet{Built the Smart Facility metrics platform (backend in Crystal/Amber) to ingest compute, data, I/O, and efficiency metrics. Designed pre-aggregated dashboards delivering 100k-record views with low latency and serving ~50k time-series points in ~87 ms. Benchmarked ~10.4k requests/sec per CPU core (~96 µs/req) for simple JSON. Shifted heavy computation to background jobs and index tables. Utilized by lab leadership to guide next-generation procurements and benchmark domains, flagging inefficient Slurm jobs.}
 
 % Fleet policy-as-code backbone
-\regbullet{Fleet policy-as-code backbone. Unified operations across 27 clusters (Slurm/LSF): automated project provisioning, access control, and scheduler policy; eliminated manual back-office corrections.}
+\regbullet{Unified day-to-day operations across 27 HPC clusters, including Frontier, via a central policy-as-code service. Automated project provisioning, access control, and scheduler policy across SLURM/LSF enclaves, serving as backbone software for a \$700M+ compute fleet and mixed open-to-secure environments.}
 
 % GitOps & CI speedups
-\regbullet{GitOps \& CI speedups. Standardized delivery with Kustomize + Argo CD on Kubernetes (GitLab runners). Migrated to Vite: builds 2 min $\rightarrow$ 9 s (−92\%), startup 30 s $\rightarrow$ <200 ms (−99\%), tests 90 s $\rightarrow$ 6 s (−93\%); faster reviews, fewer idle cycles.}
-
+\regbullet{Standardized GitOps delivery with Kustomize and Argo CD on Kubernetes (GitLab runners), enabling declarative configurations, drift correction, and one-click rollbacks across environments.}
+\regbullet{Accelerated build, startup, and test cycles by migrating to Vite and optimizing CI processes. Reduced build times from 2 minutes to 9 seconds (−92\%), startup times from 30 seconds to <200 ms (−99\%), and test durations from 90 seconds to 6 seconds (−93\%), significantly cutting developer idle time and speeding up review cycles.}
 
 \end{itemize}
 
@@ -132,8 +132,8 @@
 \noindent\textbf{Bank of America}\\
 \noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern, Consumer, Small Business \& Wealth Tech}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Los Angeles, CA}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
-% NLP project with quantifiable results
-\regbullet{Built NLP entity-extraction service for financial documents at 96\% F1, supporting \$20M+/yr in automation savings.}
+% NLP entity-extraction pipeline
+\regbullet{Built an NLP entity-extraction pipeline achieving 96\% F1 score, supporting \$20M+ annual automation savings for 100M+ documents.}
 \end{itemize}
 
 % Previous internship at ORNL
@@ -141,10 +141,10 @@
 \noindent\textbf{Oak Ridge National Laboratory}\\
 \noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
-% Consolidated ORNL internship work
-\regbullet{Year-round development of HPC-centric services, applications, and BI tools; shipped production features across internal portals. Automated supercomputer-access communications via a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual update toil.}
+\regbullet{Year-round development of HPC services, applications, and BI tools; shipped production features across internal portals. Automated supercomputer-access communications via a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual update toil.}
 \end{itemize}
-\vspace{4pt}
+
+
 
 % =============================================================================
 % SKILLS SECTION - Technical Competencies
@@ -154,10 +154,10 @@
 
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Programming languages and backend
-\regbullet{\textbf{Languages / Backend:} Ruby, Python, Go, TypeScript, SQL, Bash · Rails, FastAPI/Flask, gRPC, REST, Redis, Postgres}
+\regbullet{\textbf{Languages / Backend:} Ruby, Python, Go, TypeScript, SQL, Bash, Rails, FastAPI/Flask, gRPC, REST, Redis, Postgres}
 
 % Infrastructure, ML, and agentic systems
-\regbullet{\textbf{Infra / ML / Agentic:} Docker, Kubernetes, Kustomize, Argo CD, Slurm, CI/CD, Prometheus/Grafana, OpenTelemetry, ROCm, Vault · NVFLARE, PyTorch (ROCm), HIP · Multi-agent orchestration (CrewAI), autonomous pipelines, headless uploaders, queueing/retries}
+\regbullet{\textbf{Infra / ML / Agentic:} Docker, Kubernetes, Kustomize, Argo CD, Slurm, CI/CD, Prometheus/Grafana, OpenTelemetry, ROCm, Vault · NVFLARE, PyTorch (ROCm), HIP · Multi-agent orchestration (CrewAI), autonomous pipelines}
 \end{itemize}
 \vspace{4pt}
 
@@ -189,26 +189,18 @@
 % Project Cadenza
 \regbullet{\textbf{Project Cadenza (agentic music + video).} 150 videos published; pipeline creates artists/albums, lyrics $\rightarrow$ song (Suno/Udio), mastering, thumbnails, YouTube upload/scheduling; ISRC/metadata prep.}
 
-% AI prediction-market trading
-\regbullet{\textbf{AI prediction-market trading (Kalshi).} Multi-agent analysis (CrewAI) + realtime feeds, vector DB, Kelly sizing; selects market and executes end-to-end in <6 min (dev); Dockerized services and live dashboard.}
-
-% Anthologia
-\regbullet{\textbf{Anthologia (AI video storytelling).} 20-sec, 4-scene videos; typical 4--12 min per production; DALL·E 3 + Veo 3 (Kling fallback), ElevenLabs SFX, LatentSync lip-sync; automated QC/fallbacks.}
-
-% More agentic systems
-\regbullet{\textbf{More agentic systems.} Auto movies, books, music videos; policy-driven data synthesizer; HOA platform (Rails+React, prod-ready).}
 \end{itemize}
 \vspace{4pt}
 
 % =============================================================================
-% TALKS & COMMUNITY SECTION - Professional Involvement
+% PROFESSIONAL ACTIVITIES SECTION - Professional Involvement
 % =============================================================================
 
-\resumesection{Talks \& Community}
+\resumesection{Professional Activities}
 
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Talks
-\regbullet{\textbf{Talks:} CUG 2025 — "Employing a Software‑Driven Approach to Scalable HPC System Management."; NLIT 2024 — "Employing DevOps in HPC Operational Management."}
+\regbullet{\textbf{Talks:} CUG 2025 — "Employing a Software-Driven Approach to Scalable HPC System Management."; NLIT 2024 — "Employing DevOps in HPC Operational Management."}
 
 % Community involvement
 \regbullet{\textbf{Community:} ORNL Pathways to Computing Workshop Chair (2022--present); PEARC Student Program Committee Chair (2021--present)}

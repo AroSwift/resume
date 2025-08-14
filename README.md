@@ -66,6 +66,11 @@ xelatex -interaction=nonstopmode resume.tex
 xelatex -interaction=nonstopmode resume.tex  # Run twice for proper formatting
 ```
 
+**Quick Compile (Single Run)**:
+```bash
+xelatex resume.tex
+```
+
 **View the Resume**:
 - macOS: `make open-macos`
 - Linux: `make open-linux`
@@ -132,6 +137,12 @@ Fatal Package fontspec Error: The fontspec package requires either XeTeX or LuaT
 ```
 *Solution*: Use XeLaTeX instead of pdflatex. The Makefile is already configured correctly.
 
+**Compilation Engine Requirements**:
+- This resume uses `fontspec` package which requires XeLaTeX or LuaLaTeX
+- **Do NOT use**: `pdflatex` or `latex`
+- **Use**: `xelatex` or `lualatex`
+- The Makefile automatically uses the correct engine
+
 **Missing LaTeX Packages**:
 ```
 ! LaTeX Error: File `fontspec.sty' not found
@@ -149,6 +160,12 @@ Fatal Package fontspec Error: The fontspec package requires either XeTeX or LuaT
 ! LaTeX Error: Something's wrong--perhaps a missing \item
 ```
 *Solution*: Run `make clean` and recompile to clear any cached files.
+
+**Minor Font Warnings**:
+```
+Missing character: There is no ‑ (U+2011) in font Georgia
+```
+*Solution*: These warnings don't prevent compilation and can be safely ignored. The PDF will still generate correctly.
 
 ### Getting Help
 
