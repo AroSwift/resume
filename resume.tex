@@ -7,6 +7,9 @@
 % Using article class with 11pt font and A4 paper size for professional appearance
 \documentclass[11pt,a4paper]{article}
 
+% Remove page numbers
+\pagestyle{empty}
+
 % =============================================================================
 % PACKAGE IMPORTS AND CONFIGURATION
 % =============================================================================
@@ -38,8 +41,9 @@
 % Creates a bold section title with a 2pt gray rule underneath
 \newcommand{\resumesection}[1]{
     \vspace{3pt}                                    % Add space before section
-    \noindent{\fontsize{13}{15}\selectfont\textbf{#1}}\\[-8pt]                    % Bold section title with 2pt+ increase
-    \noindent\textcolor{gray}{\rule{\textwidth}{2pt}}\\[-10pt]  % Gray underline
+    \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-8pt]                    % Bold section title with 5% increase (13pt -> 13.65pt)
+    \noindent\textcolor{gray}{\rule{\textwidth}{2pt}}\\[-5pt]  % Gray underline with reduced spacing
+    \vspace{-8pt}                                   % SIGNIFICANTLY reduce space below the line
 }
 
 % Custom experience entry command for consistent formatting
@@ -47,7 +51,7 @@
 % Usage: \experienceentry{Company}{Date Range}{Job Title}{Location}
 \newcommand{\experienceentry}[4]{
     \vspace{2pt}                                    % Add space before entry
-    \noindent\textbf{#1} \hfill #2\\               % Company name (left) and dates (right)
+    \noindent{\fontsize{9.9}{12}\selectfont\textbf{#1}} \hfill #2\\               % Company name (left, 10% smaller) and dates (right)
     \noindent{\fontsize{10}{12}\selectfont\textit{#3}} \hfill {\fontsize{10}{12}\selectfont\textit{#4}}\\               % Job title (italic, left) and location (right) with -1pt
     \vspace{1pt}                                    % Add space after entry
 }
@@ -66,6 +70,16 @@
     \item {\fontsize{10}{12}\selectfont #1}
 }
 
+% Custom education entry command for consistent formatting
+% Parameters: #1 = University Name, #2 = Degree Details (degree, honors, specialization)
+% Usage: \educationentry{University Name}{Degree Details}
+\newcommand{\educationentry}[2]{
+    \vspace{4pt}                                    % Add more space before entry
+    \noindent\textbf{#1}\\                          % University name in bold
+    \noindent{\fontsize{10}{12}\selectfont #2}\\    % Degree details in regular font
+    \vspace{2pt}                                    % Add space after entry
+}
+
 % =============================================================================
 % DOCUMENT CONTENT BEGINS
 % =============================================================================
@@ -78,7 +92,7 @@
 
 % Centered header with name and contact information
 \begin{center}
-    {\fontsize{19}{23}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Large, bold name with 1pt increase
+    {\fontsize{21}{26}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Large, bold name with 13% increase
     865.804.6746  |  abarlow505@gmail.com  |  github.com/aroswift  |  aaronbarlow.dev\\[4pt]
 \end{center}
 
@@ -90,7 +104,7 @@
 
 % Current position at Oak Ridge National Laboratory
 \noindent\textbf{Oak Ridge National Laboratory}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences (NCCS)}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
+\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Exascale federated learning
 \regbullet{Exascale federated learning on Frontier. Ported NVFLARE to ROCm/MI250X (PyTorch with HIP-compatible builds), packaged deterministic ROCm containers, and integrated with Slurm + mTLS in secure enclaves; validated multi-node rounds and enabled current medical foundation-model training on Frontier.}
@@ -110,27 +124,27 @@
 % GitOps & CI speedups
 \regbullet{GitOps \& CI speedups. Standardized delivery with Kustomize + Argo CD on Kubernetes (GitLab runners). Migrated to Vite: builds 2 min $\rightarrow$ 9 s (−92\%), startup 30 s $\rightarrow$ <200 ms (−99\%), tests 90 s $\rightarrow$ 6 s (−93\%); faster reviews, fewer idle cycles.}
 
-% Reliability & mentorship
-\regbullet{Reliability \& mentorship. 0 post-deploy incidents in 3 years via tighter validation + expanded Cypress coverage; mentored 3 interns; coached 100+ students (PEARC/SC); authored SLOs, runbooks, incident playbooks.}
+
 \end{itemize}
 
 % Internship at Bank of America
 \vspace{8pt}
-\noindent\textbf{Bank of America — Consumer, Small Business \& Wealth Tech}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}
+\noindent\textbf{Bank of America}\\
+\noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern, Consumer, Small Business \& Wealth Tech}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Los Angeles, CA}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % NLP project with quantifiable results
-\regbullet{Built NLP entity-extraction service (names/phones/addresses/accounts/amounts) at 96\% F1, supporting \$20M+/yr in automation savings.}
+\regbullet{Built NLP entity-extraction service for financial documents at 96\% F1, supporting \$20M+/yr in automation savings.}
 \end{itemize}
 
 % Previous internship at ORNL
 \vspace{8pt}
 \noindent\textbf{Oak Ridge National Laboratory}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern, National Center for Computational Sciences (NCCS)}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
+\noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Consolidated ORNL internship work
 \regbullet{Year-round development of HPC-centric services, applications, and BI tools; shipped production features across internal portals. Automated supercomputer-access communications via a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual update toil.}
 \end{itemize}
+\vspace{4pt}
 
 % =============================================================================
 % SKILLS SECTION - Technical Competencies
@@ -145,6 +159,7 @@
 % Infrastructure, ML, and agentic systems
 \regbullet{\textbf{Infra / ML / Agentic:} Docker, Kubernetes, Kustomize, Argo CD, Slurm, CI/CD, Prometheus/Grafana, OpenTelemetry, ROCm, Vault · NVFLARE, PyTorch (ROCm), HIP · Multi-agent orchestration (CrewAI), autonomous pipelines, headless uploaders, queueing/retries}
 \end{itemize}
+\vspace{4pt}
 
 % =============================================================================
 % EDUCATION SECTION - Academic Background
@@ -152,9 +167,11 @@
 
 \resumesection{Education}
 
-% Educational background with GPA and honors
-\noindent\textbf{East Tennessee State University — B.S., Computer Science — Dean's List — GPA 3.94/4.00 • May 2020}\\
-\noindent{\fontsize{9}{11}\selectfont Activities: ACM President (2019--2020); Ethical Hacking VP (2018--2019)}
+% Educational background with degree details and honors
+\educationentry{East Tennessee State University}{Bachelor of Science, Computer Science | Dean's List | GPA 3.94/4.00 | May 2020}
+\vspace{2pt}
+\noindent{\fontsize{9}{11}\selectfont \textbf{Activities:} ACM President (2019--2020); Ethical Hacking VP (2018--2019)}
+\vspace{4pt}
 
 % =============================================================================
 % SELECTED PROJECTS SECTION - Personal and Professional Projects
@@ -181,6 +198,7 @@
 % More agentic systems
 \regbullet{\textbf{More agentic systems.} Auto movies, books, music videos; policy-driven data synthesizer; HOA platform (Rails+React, prod-ready).}
 \end{itemize}
+\vspace{4pt}
 
 % =============================================================================
 % TALKS & COMMUNITY SECTION - Professional Involvement
@@ -190,11 +208,12 @@
 
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Talks
-\regbullet{\textbf{Talks:} CUG 2025; NLIT 2024}
+\regbullet{\textbf{Talks:} CUG 2025 — "Employing a Software‑Driven Approach to Scalable HPC System Management."; NLIT 2024 — "Employing DevOps in HPC Operational Management."}
 
 % Community involvement
 \regbullet{\textbf{Community:} ORNL Pathways to Computing Workshop Chair (2022--present); PEARC Student Program Committee Chair (2021--present)}
 \end{itemize}
+\vspace{4pt}
 
 % =============================================================================
 % DOCUMENT END
