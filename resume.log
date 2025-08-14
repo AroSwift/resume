@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 AUG 2025 16:56
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.3.8)  14 AUG 2025 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -261,59 +261,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
-
-Overfull \hbox (35.73619pt too wide) in paragraph at lines 97--98
-\TU/Georgia(0)/b/n/10 TOP500 #2)\TU/Georgia(0)/m/n/10 , unlocking cross-institu
-tion healthcare data training on AMD GPUs. Brought NVFLARE to ROCm/MI250X
- []
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 103.
+(Font)              <7> on input line 99.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 103.
+(Font)              <5> on input line 99.
 
-Overfull \hbox (46.38368pt too wide) in paragraph at lines 106--107
-[]\TU/Georgia(0)/m/n/10 Extended the Netflix-originated \TU/Georgia(0)/b/n/10 f
-ast_jsonapi \TU/Georgia(0)/m/n/10 fork (\TU/Georgia(0)/b/n/10 jsonapi-serialize
-r\TU/Georgia(0)/m/n/10 ) via ‘lib/library_extensions/jsonapi_serializer.rb‘
- []
-
-! Extra \else.
-\textbf  ...fmmode \nfss@text {\bfseries #1}\else 
-                                                  \hmode@bgroup \text@comman...
-l.112 ...omains, flagging inefficient Slurm jobs.}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-! Extra \fi.
-\textbf  ...#1\check@icr \expandafter \egroup \fi 
-                                                  
-l.112 ...omains, flagging inefficient Slurm jobs.}
-                                                  
-I'm ignoring this; it doesn't match any \if.
-
-! Extra }, or forgotten \endgroup.
-\regbullet ...m {\fontsize {10}{12}\selectfont #1}
-                                                   
-l.112 ...omains, flagging inefficient Slurm jobs.}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Overfull \hbox (3.15129pt too wide) in paragraph at lines 112--113
-[]\TU/Georgia(0)/m/n/10 Built the \TU/Georgia(0)/b/n/10 Smart Facility metrics 
-platform \TU/Georgia(0)/m/n/10 (backend in Crystal/Amber) ingesting compute/dat
-a/I/O/efficiency
+Overfull \hbox (12.22568pt too wide) in paragraph at lines 123--124
+[]\TU/Georgia(0)/m/n/10 Built NLP entity-extraction service (names/phones/addre
+sses/accounts/amounts) at 96% F1, supporting $20M+/yr
  []
 
 
-Overfull \hbox (46.17017pt too wide) in paragraph at lines 121--122
-[]\TU/Georgia(0)/m/n/10 Automated project lifecycle and data-integrity workflow
-s, eliminating manual back-office corrections for project/application
+Underfull \hbox (badness 10000) in paragraph at lines 139--140
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
  []
 
 
@@ -321,62 +291,25 @@ s, eliminating manual back-office corrections for project/application
 [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-
-Overfull \hbox (4.67035pt too wide) in paragraph at lines 174--175
-[]\TU/Georgia(0)/b/n/10 Agentic Systems: \TU/Georgia(0)/m/n/10 multi-agent orch
-estration (\TU/Georgia(0)/b/n/10 CrewAI \TU/Georgia(0)/m/n/10 for Anthologia & 
-prediction-market system), autonomous
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Overfull \hbox (10.18553pt too wide) in paragraph at lines 184--186
-\TU/Georgia(0)/b/n/10.95 East Tennessee State University \TU/Georgia(0)/m/n/10.
-95 — Bachelor of Science, Computer Science | Dean’s List | GPA \TU/Georgia(0)/b
-/n/10.95 3.94/4.00
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--192
-
- []
-
-
-Overfull \hbox (12.7449pt too wide) in paragraph at lines 216--217
-[]\TU/Georgia(0)/b/n/10 Automatic book creation \TU/Georgia(0)/m/n/10 — multi-a
-gent pipeline (CrewAI) orchestrates GPT-4o-mini writing, Flux Pro/Replicate
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
 
-[2]
-
-[3] (./resume.aux)
+[2] (./resume.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4539 strings out of 473832
- 122404 string characters out of 5729482
- 570690 words of memory out of 5000000
- 27596 multiletter control sequences out of 15000+600000
- 559045 words of font info for 62 fonts, out of 8000000 for 9000
+ 4527 strings out of 473832
+ 122183 string characters out of 5729482
+ 568690 words of memory out of 5000000
+ 27586 multiletter control sequences out of 15000+600000
+ 559029 words of font info for 60 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,5n,93p,600b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,5n,93p,397b,234s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on resume.pdf (3 pages).
+Output written on resume.pdf (2 pages).
