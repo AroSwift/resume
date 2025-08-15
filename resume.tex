@@ -38,22 +38,22 @@
 
 % Custom section command that creates a thick gray underline
 % Usage: \resumesection{Section Name}
-% Creates a bold section title with a 2pt gray rule underneath
+% Creates a bold section title with a 3pt lighter gray rule underneath
 \newcommand{\resumesection}[1]{
-    \vspace{3pt}                                    % Add space before section
-    \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-8pt]                    % Bold section title with 5% increase (13pt -> 13.65pt)
-    \noindent\textcolor{gray}{\rule{\textwidth}{2pt}}\\[-5pt]  % Gray underline with reduced spacing
-    \vspace{-8pt}                                   % SIGNIFICANTLY reduce space below the line
+    \vspace{0pt}                                    % Add space before section
+    \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-5pt]                    % Bold section title with 5% increase (13pt -> 13.65pt)
+    \noindent\textcolor{gray!50}{\rule{\textwidth}{3pt}}\\[-5pt]  % Lighter gray underline, now 3pt thick
+    \vspace{-9pt}                                   % SIGNIFICANTLY reduce space below the line
 }
 
 % Custom experience entry command for consistent formatting
 % Parameters: #1 = Company/Institution, #2 = Date Range, #3 = Job Title, #4 = Location
 % Usage: \experienceentry{Company}{Date Range}{Job Title}{Location}
 \newcommand{\experienceentry}[4]{
-    \vspace{2pt}                                    % Add space before entry
+    \vspace{0pt}                                    % Add space before entry
     \noindent{\fontsize{9.9}{12}\selectfont\textbf{#1}} \hfill #2\\               % Company name (left, 10% smaller) and dates (right)
     \noindent{\fontsize{10}{12}\selectfont\textit{#3}} \hfill {\fontsize{10}{12}\selectfont\textit{#4}}\\               % Job title (italic, left) and location (right) with -1pt
-    \vspace{1pt}                                    % Add space after entry
+    \vspace{0pt}                                    % Add space after entry
 }
 
 % Custom command for smaller font bullet points to save space
@@ -92,7 +92,7 @@
 
 % Centered header with name and contact information
 \begin{center}
-    {\fontsize{21}{26}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Large, bold name with 13% increase
+    {\fontsize{25}{30}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Larger, bold name with 4pt+ increase
     865.804.6746  \ \ |\ \  abarlow505@gmail.com  \ \ |\ \  github.com/aroswift  \ \ |\ \  aaronbarlow.dev\\[4pt]
 \end{center}
 
@@ -118,8 +118,8 @@
 % myOLCF scale & reliability
 \regbullet{Deployed and expanded myOLCF, a researcher self-service and monitoring platform supporting 4,000+ users across 1,000+ large-scale research campaigns, consistently achieving $\sim$99.9\% availability.}
 
-% Smart Facility metrics
-\regbullet{Co-architected Smart Facility metrics (Crystal/Amber): dashboards serve 100k-row views and 50k points in 87 ms, benchmarked 10.4k req/s/core (96 µs/req), offloaded compute to background jobs and indexes, used by leadership to guide procurements and flag inefficient Slurm jobs.}
+% Smart Facility metrics (Crystal/Amber)
+\regbullet{Co-architected Smart Facility metrics (Crystal/Amber), delivering 100k-row views, 50k points in 87 ms, and 10.4k req/s/core (96 µs/req). Offloaded compute to background jobs and indexes; used by leadership for procurement and to flag inefficient Slurm jobs.}
 
 % GitOps & CI speedups
 \regbullet{Migrated to Vite and optimized CI pipelines, cutting builds from 2min to 9s, startup from 30s to under 200ms, and tests from 90s to 6s-boosting developer productivity, shortening feedback loops, and speeding deployments.}
@@ -152,7 +152,7 @@
 
 \resumesection{Skills}
 
-\begin{itemize}[leftmargin=18pt,itemsep=0pt,topsep=0pt]
+\begin{itemize}[leftmargin=18pt,itemsep=-2pt,topsep=0pt]
     % Programming languages
     \regbullet{\textbf{Languages}\hspace{23pt}Ruby, Python, Go, Crystal, C, C++, C\#, JavaScript, SQL, Bash, HTML, SASS}
 
@@ -180,7 +180,7 @@
 
 \resumesection{Selected Projects}
 
-\begin{itemize}[leftmargin=18pt,itemsep=0pt,topsep=0pt]
+\begin{itemize}[leftmargin=18pt,itemsep=-2pt,topsep=0pt]
 
 \regbullet{\textbf{Automatic podcast creation} – Produced 192 podcast episodes (~1.8k downloads, 50+ hours listened) through a fully automated pipeline from Claude Sonnet scripts to ElevenLabs TTS to Spreaker publishing.}
 
