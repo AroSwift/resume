@@ -93,7 +93,7 @@
 % Centered header with name and contact information
 \begin{center}
     {\fontsize{21}{26}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Large, bold name with 13% increase
-    865.804.6746  |  abarlow505@gmail.com  |  github.com/aroswift  |  aaronbarlow.dev\\[4pt]
+    865.804.6746  \ \ |\ \  abarlow505@gmail.com  \ \ |\ \  github.com/aroswift  \ \ |\ \  aaronbarlow.dev\\[4pt]
 \end{center}
 
 % =============================================================================
@@ -104,13 +104,13 @@
 
 % Current position at Oak Ridge National Laboratory
 \noindent\textbf{Oak Ridge National Laboratory}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
+\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Remote}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Exascale federated learning
-\regbullet{Developed privacy-preserving federated learning at exascale on Frontier (TOP500 \#2), enabling cross-institution healthcare data training on AMD GPUs. Integrated NVFLARE with ROCm/MI250X and PyTorch, produced HIP-compatible builds, and implemented Slurm integration with mTLS inside secure enclaves. Validated multi-node training rounds previously unachievable on Frontier, now utilized for building privacy-preserving medical foundation models.}
+\regbullet{Developed privacy-preserving federated learning on Frontier (TOP500 \#2), enabling cross-institution healthcare data training on AMD GPUs. Integrated NVFLARE with ROCm/MI250X and PyTorch, produced HIP-compatible builds, and implemented Slurm integration with mTLS. Validated multi-node training rounds previously unachievable on Frontier, used for building privacy-preserving medical foundation model.}
 
-% 1320x faster directories API
-\regbullet{Optimized the directories endpoint by replacing Jbuilder with a JSON:API serializer and explicit Redis caching for hot read paths, reducing response time from ~272s to 178--206 ms on cached hits (≈1320× improvement) and improving first-hit performance from 298.5s to 246.8s (−17\%). Eliminated view-rendering costs (~252s to ~0ms) and reduced ActiveRecord time (~19.2s to 8.8ms). Stabilized fleet-wide polling and removed timeouts during cluster syncs.}
+% 1320× faster directories API
+\regbullet{Optimized directories API: switched Jbuilder to JSON:API serializer, added Redis caching for hot reads. Cached responses now 178--206 ms (down from 272 s, $\sim$1320$\times$ faster); first-hit 298.5 s $\rightarrow$ 246.8 s ($-$17\%). Eliminated view rendering (252 s $\rightarrow$ 0 ms) and cut ActiveRecord time (19.2 s $\rightarrow$ 8.8 ms). Stabilized fleet-wide polling and removed cluster sync timeouts.}
 
 % myOLCF scale & reliability
 \regbullet{Managed and scaled myOLCF, a researcher self-service and monitoring platform used by approximately 4,000 users across 1,000+ projects, achieving 99.9\%+ availability. Delivered 12 FY2025 releases governing access, allocation, and policy across open, moderate, and secure enclaves.}
@@ -122,7 +122,6 @@
 \regbullet{Unified day-to-day operations across 27 HPC clusters, including Frontier, via a central policy-as-code service. Automated project provisioning, access control, and scheduler policy across SLURM/LSF enclaves, serving as backbone software for a \$700M+ compute fleet and mixed open-to-secure environments.}
 
 % GitOps & CI speedups
-\regbullet{Standardized GitOps delivery with Kustomize and Argo CD on Kubernetes (GitLab runners), enabling declarative configurations, drift correction, and one-click rollbacks across environments.}
 \regbullet{Accelerated build, startup, and test cycles by migrating to Vite and optimizing CI processes. Reduced build times from 2 minutes to 9 seconds (−92\%), startup times from 30 seconds to <200 ms (−99\%), and test durations from 90 seconds to 6 seconds (−93\%), significantly cutting developer idle time and speeding up review cycles.}
 
 \end{itemize}
@@ -133,7 +132,7 @@
 \noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern, Consumer, Small Business \& Wealth Tech}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Los Angeles, CA}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % NLP entity-extraction pipeline
-\regbullet{Built an NLP entity-extraction pipeline achieving 96\% F1 score, supporting \$20M+ annual automation savings for 100M+ documents.}
+\regbullet{Built an NLP entity-extraction (such as names and addresses) pipeline for 100M+ documents, achieving a 96\% F1 score and supporting \$20M+ annual automation savings.}
 \end{itemize}
 
 % Previous internship at ORNL
@@ -141,8 +140,9 @@
 \noindent\textbf{Oak Ridge National Laboratory}\\
 \noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
-\regbullet{Year-round development of HPC services, applications, and BI tools; shipped production features across internal portals. Automated supercomputer-access communications via a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual update toil.}
+\regbullet{Developed HPC services, applications, and BI tools, shipping production features for internal portals. Automated supercomputer-access communications with a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual updates.}
 \end{itemize}
+\vspace{8pt}
 
 
 
@@ -154,7 +154,7 @@
 
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Programming languages and backend
-\regbullet{\textbf{Languages / Backend:} Ruby, Python, Go, TypeScript, SQL, Bash, Rails, FastAPI/Flask, gRPC, REST, Redis, Postgres}
+\regbullet{\textbf{Languages \& Backend:} Ruby, Python, Go, TypeScript, SQL, Bash, Rails, FastAPI/Flask, REST, Redis, Postgres}
 
 % Infrastructure, ML, and agentic systems
 \regbullet{\textbf{Infra / ML / Agentic:} Docker, Kubernetes, Kustomize, Argo CD, Slurm, CI/CD, Prometheus/Grafana, OpenTelemetry, ROCm, Vault · NVFLARE, PyTorch (ROCm), HIP · Multi-agent orchestration (CrewAI), autonomous pipelines}
@@ -168,7 +168,7 @@
 \resumesection{Education}
 
 % Educational background with degree details and honors
-\educationentry{East Tennessee State University}{Bachelor of Science, Computer Science | Dean's List | GPA 3.94/4.00 | May 2020}
+\educationentry{East Tennessee State University}{Bachelor of Science, Computer Science | GPA 3.94/4.00 | May 2020}
 \vspace{2pt}
 \noindent{\fontsize{9}{11}\selectfont \textbf{Activities:} ACM President (2019--2020); Ethical Hacking VP (2018--2019)}
 \vspace{4pt}
