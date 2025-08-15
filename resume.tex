@@ -40,10 +40,10 @@
 % Usage: \resumesection{Section Name}
 % Creates a bold section title with a 3pt lighter gray rule underneath
 \newcommand{\resumesection}[1]{
-    \vspace{0pt}                                    % Add space before section
+    \vspace{1pt}                                    % Add space before section
     \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-5pt]                    % Bold section title with 5% increase (13pt -> 13.65pt)
-    \noindent\textcolor{gray!50}{\rule{\textwidth}{3pt}}\\[-5pt]  % Lighter gray underline, now 3pt thick
-    \vspace{-9pt}                                   % SIGNIFICANTLY reduce space below the line
+    \noindent\textcolor{gray!50}{\rule{\textwidth}{3pt}}\\[-6pt]  % Lighter gray underline, now 3pt thick
+    \vspace{-10pt}                                   % SIGNIFICANTLY reduce space below the line
 }
 
 % Custom experience entry command for consistent formatting
