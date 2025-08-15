@@ -19,12 +19,12 @@
 \setmainfont{Georgia}
 
 % Page layout and spacing packages
-\usepackage[margin=0.6in]{geometry}  % Set page margins to 0.6 inches for compact layout
-\usepackage{enumitem}                % Enhanced list formatting
-\usepackage{setspace}                % Line spacing control
-\usepackage{xcolor}                  % Color support for custom styling
-\usepackage{url}                     % URL formatting support
-\usepackage[colorlinks=false,urlcolor=black,linkcolor=black,citecolor=black,hidelinks]{hyperref}  % Hyperlink support without any visual indicators
+\usepackage[margin=0.6in]{geometry} % Set page margins to 0.6 inches for compact layout
+\usepackage{enumitem} % Enhanced list formatting
+\usepackage{setspace} % Line spacing control
+\usepackage{xcolor} % Color support for custom styling
+\usepackage{url} % URL formatting support
+\usepackage[colorlinks=false,urlcolor=black,linkcolor=black,citecolor=black,hidelinks]{hyperref} % Hyperlink support without any visual indicators
 
 % =============================================================================
 % DOCUMENT STYLING AND FORMATTING
@@ -42,20 +42,20 @@
 % Usage: \resumesection{Section Name}
 % Creates a bold section title with a 3pt lighter gray rule underneath
 \newcommand{\resumesection}[1]{
-    \vspace{2pt}                                    % Add space before section
-    \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-5pt]                    % Bold section title with 5% increase (13pt -> 13.65pt)
-    \noindent\textcolor{gray!50}{\rule{\textwidth}{3pt}}\\[-6pt]  % Lighter gray underline, now 3pt thick
-    \vspace{-9pt}                                   % SIGNIFICANTLY reduce space below the line
+    \vspace{2pt} % Add space before section
+    \noindent{\fontsize{13.65}{16}\selectfont\textbf{#1}}\\[-5pt] % Bold section title with 5% increase (13pt -> 13.65pt)
+    \noindent\textcolor{gray!50}{\rule{\textwidth}{3pt}}\\[-6pt] % Lighter gray underline, now 3pt thick
+    \vspace{-9pt} % SIGNIFICANTLY reduce space below the line
 }
 
 % Custom experience entry command for consistent formatting
 % Parameters: #1 = Company/Institution, #2 = Date Range, #3 = Job Title, #4 = Location
 % Usage: \experienceentry{Company}{Date Range}{Job Title}{Location}
 \newcommand{\experienceentry}[4]{
-    \vspace{0pt}                                    % Add space before entry
-    \noindent{\fontsize{9.9}{12}\selectfont\textbf{#1}} \hfill #2\\               % Company name (left, 10% smaller) and dates (right)
-    \noindent{\fontsize{10}{12}\selectfont\textit{#3}} \hfill {\fontsize{10}{12}\selectfont\textit{#4}}\\               % Job title (italic, left) and location (right) with -1pt
-    \vspace{0pt}                                    % Add space after entry
+    \vspace{0pt} % Add space before entry
+    \noindent{\fontsize{9.9}{12}\selectfont\textbf{#1}} \hfill #2\\ % Company name (left, 10% smaller) and dates (right)
+    \noindent{\fontsize{10}{12}\selectfont\textit{#3}} \hfill {\fontsize{10}{12}\selectfont\textit{#4}}\\ % Job title (italic, left) and location (right)
+    \vspace{0pt} % Add space after entry
 }
 
 % Custom command for smaller font bullet points to save space
@@ -77,10 +77,10 @@
 % Parameters: #1 = University Name, #2 = Degree Details (degree, honors, specialization)
 % Usage: \educationentry{University Name}{Degree Details}
 \newcommand{\educationentry}[2]{
-    \vspace{3pt}                                    % Add more space before entry
-    \noindent\textbf{#1}\\                          % University name in bold
-    \noindent{\fontsize{10}{12}\selectfont #2}\\    % Degree details in regular font
-    \vspace{2pt}                                    % Add space after entry
+    \vspace{3pt} % Add more space before entry
+    \noindent\textbf{#1}\\ % University name in bold
+    \noindent{\fontsize{10}{12}\selectfont #2}\\ % Degree details in regular font
+    \vspace{2pt} % Add space after entry
 }
 
 % =============================================================================
@@ -95,7 +95,7 @@
 
 % Centered header with name and contact information
 \begin{center}
-    {\fontsize{25}{30}\selectfont\textbf{Aaron Barlow}}\\[4pt]           % Larger, bold name with 4pt+ increase
+    {\fontsize{25}{30}\selectfont\textbf{Aaron Barlow}}\\[4pt] % Larger, bold name with 4pt+ increase
     865.804.6746  \ \ |\ \  abarlow505@gmail.com  \ \ |\ \  github.com/aroswift  \ \ |\ \  \href{https://aaronbarlow.dev/}{aaronbarlow.dev}\\[4pt]
 \end{center}
 
