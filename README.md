@@ -2,6 +2,9 @@
 
 <div align="center">
 
+## **[View PDF Resume](resume.pdf)** &nbsp;&nbsp; | &nbsp;&nbsp; **[View Source](resume.tex)**
+
+
 ![LaTeX](https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=latex&logoColor=white)
 ![PDF](https://img.shields.io/badge/PDF-FF0000?style=for-the-badge&logo=adobe-acrobat-reader&logoColor=white)
 ![Make](https://img.shields.io/badge/Make-FF6B35?style=for-the-badge&logo=gnu&logoColor=white)
@@ -174,15 +177,6 @@ Missing character: There is no ‑ (U+2011) in font Georgia
 3. Clean Build: Run `make clean` before recompiling
 4. Check Logs: Review `resume.log` for detailed error information
 
-## Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ### Development Guidelines
 
@@ -203,5 +197,6 @@ This resume template is freely available and modifiable for personal and profess
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aroswift)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/allaaronbarlow)
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=globe&logoColor=white)](https://aaronbarlow.dev)
 
 </div>
