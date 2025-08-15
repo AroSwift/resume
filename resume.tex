@@ -104,22 +104,22 @@
 
 % Current position at Oak Ridge National Laboratory
 \noindent\textbf{Oak Ridge National Laboratory}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{HPC Software Engineer, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{Jun 2020--Present}}  |  {\fontsize{10}{12}\selectfont\textit{Remote}}
+\noindent{\fontsize{10}{12}\selectfont HPC Software Engineer, National Center for Computational Sciences}  |  {\fontsize{10}{12}\selectfont Jun 2020--Present}  |  {\fontsize{10}{12}\selectfont Remote}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % Exascale federated learning
-\regbullet{Developed privacy-preserving federated learning on Frontier (TOP500 \#2), enabling cross-institution healthcare data training on AMD GPUs. Integrated NVFLARE with ROCm/MI250X and PyTorch, produced HIP-compatible builds, and implemented Slurm integration with mTLS. Validated multi-node training rounds previously unachievable on Frontier, used for building privacy-preserving medical foundation model.}
+\regbullet{Delivered AMD-compatible NVFLARE on Frontier (TOP500 \#2) by integrating ROCm on MI250X GPUs with PyTorch, enabling cross-institution healthcare training for privacy-preserving medical foundation models.}
 
-% 1320× faster directories API
-\regbullet{Optimized directories API: switched Jbuilder to JSON:API serializer, added Redis caching for hot reads. Cached responses now 178--206 ms (down from 272 s, $\sim$1320$\times$ faster); first-hit 298.5 s $\rightarrow$ 246.8 s ($-$17\%). Eliminated view rendering (252 s $\rightarrow$ 0 ms) and cut ActiveRecord time (19.2 s $\rightarrow$ 8.8 ms). Stabilized fleet-wide polling and removed cluster sync timeouts.}
+% Fleet system of record for 27 HPC clusters
+\regbullet{Maintain and enhance the system of record for 27 HPC clusters, including Frontier, serving as the single source of truth for cluster state. Automate provisioning (filesystem directories, UNIX users/groups), access, and scheduling in Slurm/LSF to ensure continuous operations for \$700M+ in compute systems.}
+
+% Directories API: 1,320× speedup
+\regbullet{Optimized Directories API by replacing Jbuilder with JSON:API and adding Redis caching—cutting cached responses from 272 s to 178--206 ms ($\sim$1,320$\times$) and first-hit latency by 17\%. Eliminated view rendering, reduced ActiveRecord time from 19.2 s to 8.8 ms, and stabilized fleet polling to remove cluster-sync timeouts.}
 
 % myOLCF scale & reliability
-\regbullet{Managed and scaled myOLCF, a researcher self-service and monitoring platform used by approximately 4,000 users across 1,000+ projects, achieving 99.9\%+ availability. Delivered 12 FY2025 releases governing access, allocation, and policy across open, moderate, and secure enclaves.}
+\regbullet{Deployed and expanded myOLCF, a researcher self-service and monitoring platform supporting 4,000+ users across 1,000+ large-scale research campaigns, consistently achieving $\sim$99.9\% availability. Delivered 12 FY2025 releases to govern access, allocation, and policy across open, moderate, and secure enclaves.}
 
 % Smart Facility metrics
-\regbullet{Built the Smart Facility metrics platform (backend in Crystal/Amber) to ingest compute, data, I/O, and efficiency metrics. Designed pre-aggregated dashboards delivering 100k-record views with low latency and serving ~50k time-series points in ~87 ms. Benchmarked ~10.4k requests/sec per CPU core (~96 µs/req) for simple JSON. Shifted heavy computation to background jobs and index tables. Utilized by lab leadership to guide next-generation procurements and benchmark domains, flagging inefficient Slurm jobs.}
-
-% Fleet policy-as-code backbone
-\regbullet{Unified day-to-day operations across 27 HPC clusters, including Frontier, via a central policy-as-code service. Automated project provisioning, access control, and scheduler policy across SLURM/LSF enclaves, serving as backbone software for a \$700M+ compute fleet and mixed open-to-secure environments.}
+\regbullet{Co-architected Smart Facility metrics (Crystal/Amber): dashboards serve 100k-row views and 50k points in 87 ms, benchmarked 10.4k req/s/core (96 µs/req), offloaded compute to background jobs and indexes, used by leadership to guide procurements and flag inefficient Slurm jobs.}
 
 % GitOps & CI speedups
 \regbullet{Accelerated build, startup, and test cycles by migrating to Vite and optimizing CI processes. Reduced build times from 2 minutes to 9 seconds (−92\%), startup times from 30 seconds to <200 ms (−99\%), and test durations from 90 seconds to 6 seconds (−93\%), significantly cutting developer idle time and speeding up review cycles.}
@@ -129,18 +129,18 @@
 % Internship at Bank of America
 \vspace{8pt}
 \noindent\textbf{Bank of America}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{ML Engineer Intern, Consumer, Small Business \& Wealth Tech}}  |  {\fontsize{10}{12}\selectfont\textit{Jun--Aug 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Los Angeles, CA}}
+\noindent{\fontsize{10}{12}\selectfont ML Engineer Intern, Consumer, Small Business \& Wealth Tech}  |  {\fontsize{10}{12}\selectfont Jun--Aug 2019}  |  {\fontsize{10}{12}\selectfont Los Angeles, CA}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
 % NLP entity-extraction pipeline
-\regbullet{Built an NLP entity-extraction (such as names and addresses) pipeline for 100M+ documents, achieving a 96\% F1 score and supporting \$20M+ annual automation savings.}
+\regbullet{Built an NLP entity-extraction (such as names, addresses, account numbers) pipeline for 100M+ documents, achieving a 96\% F1 score and supporting \$20M+ annual automation savings.}
 \end{itemize}
 
 % Previous internship at ORNL
 \vspace{8pt}
 \noindent\textbf{Oak Ridge National Laboratory}\\
-\noindent{\fontsize{10}{12}\selectfont\textit{Software Developer Intern, National Center for Computational Sciences}}  |  {\fontsize{10}{12}\selectfont\textit{May 2015--May 2019}}  |  {\fontsize{10}{12}\selectfont\textit{Oak Ridge, TN}}
+\noindent{\fontsize{10}{12}\selectfont Software Developer Intern, National Center for Computational Sciences}  |  {\fontsize{10}{12}\selectfont May 2015--May 2019}  |  {\fontsize{10}{12}\selectfont Oak Ridge, TN}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
-\regbullet{Developed HPC services, applications, and BI tools, shipping production features for internal portals. Automated supercomputer-access communications with a policy-aware email system and built a WordPress/REST plugin to sync and display HPC metrics on olcf.ornl.gov, improving data freshness and reducing manual updates.}
+\regbullet{Year-round development on ops software for 20+ HPC clusters—the system of record for cluster state—automating provisioning (filesystems, UNIX users/groups) and access control ensuring uptime for \$250M compute.}
 \end{itemize}
 \vspace{8pt}
 
