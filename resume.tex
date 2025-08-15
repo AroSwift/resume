@@ -65,8 +65,9 @@
 
 % Custom command for regular bullet points with -1pt font size
 % Usage: \regbullet{Bullet point text}
-% Reduces font size to 10pt for regular bullet points
+% Reduces font size to 10pt for regular bullet points and decreases top spacing by -2pt
 \newcommand{\regbullet}[1]{
+    \vspace{-2pt}%
     \item {\fontsize{10}{12}\selectfont #1}
 }
 
@@ -74,7 +75,7 @@
 % Parameters: #1 = University Name, #2 = Degree Details (degree, honors, specialization)
 % Usage: \educationentry{University Name}{Degree Details}
 \newcommand{\educationentry}[2]{
-    \vspace{4pt}                                    % Add more space before entry
+    \vspace{3pt}                                    % Add more space before entry
     \noindent\textbf{#1}\\                          % University name in bold
     \noindent{\fontsize{10}{12}\selectfont #2}\\    % Degree details in regular font
     \vspace{2pt}                                    % Add space after entry
@@ -127,7 +128,7 @@
 \end{itemize}
 
 % Internship at Bank of America
-\vspace{8pt}
+\vspace{2pt}
 \noindent\textbf{Bank of America}\\
 \noindent{\fontsize{10}{12}\selectfont ML Engineer Intern, Consumer, Small Business \& Wealth Tech}  |  {\fontsize{10}{12}\selectfont Jun--Aug 2019}  |  {\fontsize{10}{12}\selectfont Los Angeles, CA}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
@@ -136,7 +137,7 @@
 \end{itemize}
 
 % Previous internship at ORNL
-\vspace{8pt}
+\vspace{2pt}
 \noindent\textbf{Oak Ridge National Laboratory}\\
 \noindent{\fontsize{10}{12}\selectfont Software Developer Intern, National Center for Computational Sciences}  |  {\fontsize{10}{12}\selectfont May 2015--May 2019}  |  {\fontsize{10}{12}\selectfont Oak Ridge, TN}
 \begin{itemize}[leftmargin=18pt,itemsep=1pt,topsep=0pt]
@@ -162,7 +163,7 @@
     % Tools
     \regbullet{\textbf{Tools}\hspace{50pt}Docker, Kubernetes, Kustomize, Argo CD, Slurm, Redis, PostgreSQL}
 \end{itemize}
-\vspace{4pt}
+\vspace{3pt}
 
 % =============================================================================
 % EDUCATION SECTION - Academic Background
@@ -172,7 +173,7 @@
 
 \educationentry{East Tennessee State University}{Bachelor of Science in Computer Science  \,|\,  May 2020  \,|\, 3.94/4 GPA}
 \hspace{8pt}\noindent{\fontsize{9}{11}\selectfont ACM President (2019--2020), Ethical Hacking Vice President (2018--2019)}
-\vspace{4pt}
+\vspace{3pt}
 
 % =============================================================================
 % SELECTED PROJECTS SECTION - Personal and Professional Projects
@@ -183,13 +184,15 @@
 \begin{itemize}[leftmargin=18pt,itemsep=-2pt,topsep=0pt]
 
 \regbullet{\textbf{Automatic podcast creation} – Produced 192 podcast episodes (~1.8k downloads, 50+ hours listened) through a fully automated pipeline from Claude Sonnet scripts to ElevenLabs TTS to Spreaker publishing.}
+\vspace{2pt}
 
 \regbullet{\textbf{Automatic e-commerce creation} – Generated 152 products (57k+ views) at ~\$0.31/unit via GPT orchestration + Flux Pro imagery, auto-published to Printful/Etsy/Redbubble.}
+\vspace{2pt}
 
 \regbullet{\textbf{Project Cadenza (autonomous music video creation)} – Published 150 videos via an end-to-end pipeline: artist/album creation, lyric/song generation, thumbnail choice, and YouTube publishing.}
 
 \end{itemize}
-\vspace{4pt}
+\vspace{3pt}
 
 % =============================================================================
 % PROFESSIONAL ACTIVITIES SECTION - Professional Involvement
@@ -204,7 +207,7 @@
 % Community involvement
 \regbullet{\textbf{Community:} ORNL Pathways to Computing Workshop Chair (2022--present); PEARC Student Program Committee Chair (2021--present)}
 \end{itemize}
-\vspace{4pt}
+\vspace{3pt}
 
 % =============================================================================
 % DOCUMENT END
